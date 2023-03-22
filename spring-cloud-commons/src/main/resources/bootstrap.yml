@@ -1,0 +1,9 @@
+#file: noinspection undefined
+spring:
+  application:
+    name: sample
+  profiles:
+    active:
+      dev
+test.bootstrap.key: bootstrap.yml
+test.value: I am loaded by bootstrap.yml.

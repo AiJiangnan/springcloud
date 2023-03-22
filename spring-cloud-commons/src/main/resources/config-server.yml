@@ -1,0 +1,4 @@
+# 模拟配置中心的配置
+#file: noinspection undefined
+test.common.key: config-server.yml
+test.value: I am loaded by config-server.yml.

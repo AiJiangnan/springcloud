@@ -1,0 +1,3 @@
+#file: noinspection undefined
+test.application.key: application.yml
+test.value: I am loaded by application.yml.
