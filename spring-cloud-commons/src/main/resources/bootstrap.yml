@@ -3,7 +3,5 @@ spring:
   application:
     name: sample
   profiles:
-    active:
-      dev
+    active: dev
 test.bootstrap.key: bootstrap.yml
-test.value: I am loaded by bootstrap.yml.

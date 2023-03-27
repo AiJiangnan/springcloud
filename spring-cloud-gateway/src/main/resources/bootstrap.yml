@@ -1,0 +1,23 @@
+# Spring
+spring.application.name: gateway
+# Spring Cloud Discovery
+spring.cloud.gateway.discovery.locator.enabled: true
+spring.cloud.gateway.discovery.locator.lower-case-service-id: true
+spring.cloud.gateway.routes:
+  - id: shortcut
+    uri: https://example.org
+    predicates:
+      - Path=/red/**
+    filters:
+      - RewritePath=/red(?<segment>/?.*), $\{segment}
+  - id: full
+    uri: https://example.org
+    predicates:
+      - name: Path
+        args:
+          patterns: /red/**
+    filters:
+      - name: RewritePath
+        args:
+          regexp: /red(?<segment>/?.*)
+          replacement: $\{segment}
